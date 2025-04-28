@@ -3,7 +3,6 @@ pipeline {
     
     environment {
         // AWS Configuration
-        586794481217.dkr.ecr.us-east-1.amazonaws.com/eks-demo/golang-app
         AWS_REGION = 'us-east-1'                                                          // Replace with your AWS region
         AWS_ACCOUNT_ID = '586794481217'                                                   // Replace with your AWS account ID
         ECR_REPOSITORY = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/eks-demo/golang-app"   // Replace with your ECR repo name
