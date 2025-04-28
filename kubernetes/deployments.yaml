@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-world-app
+  name: mygolang-app
   labels:
-    app: hello-world-app
+    app: mygolang-app
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: hello-world-app
+      app: mygolang-app
   template:
     metadata:
       labels:
-        app: hello-world-app
+        app: mygolang-app
     spec:
       containers:
-      - name: hello-world-app
-        image: ${DOCKER_REGISTRY}/hello-world-app:${IMAGE_TAG}
+      - name: mygolang-app-container
+        image: ${DOCKER_REGISTRY}/mygolang-app:${IMAGE_TAG}
         ports:
         - containerPort: 8080
         resources:
